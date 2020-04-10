@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fun02</title>
+    <script>
+        利用函数判断闰年
+        function isRunYear(year) {
+            // 如果是闰年我们返回true 否则返回false;
+            var flag = false;
+            if (year %4 ==0 && year %100 !=0 || year %400 == 0) {
+                flag = true;
+            } 
+            return flag;
+     
+        }
+        console.log(isRunYear(2000));
+        console.log(isRunYear(1999));
+        1 利用对象字面量创建对象
+        var obj = {
+            uname: '张三',
+            age: 18,
+            sex: '男',
+            sayHi: function () {
+                console.log('hi')
+            }
+        }
+        console.log(obj.uname);
+        obj.sayHi()
+        里面的属性或者方法我们采取键值对的形式 键 属性名： 值 属性值
+        多个属性或者方法中间用逗号隔开
+        方法冒号后面跟的是一个匿名函数
+
+        2 使用对象
+        调用对象的属性我们采取 对象名.属性名 .我们理解为的
+        console.log(obj.uname')
+        调用属性还有一种方法 对象名['属性名']
+        console.log(obj['age'])
+        调用对象的方法sayHi 对象名.方法名（），千万别忘记添加小括号
+      
+       var obj = new Object()
+       obj.uname = '张三';
+       obj.age = 18;
+       obj.sex = '女';
+       obj.sayHi = function () {
+        console.log('hi');
+       }
+
+       new关键字执行过程
+       1 new 构造函数可以在内存中创建一个空的对象
+       2.this 就会指向刚才创建的空对象
+       3.执行构造函数里面的的代码 给这个空对象添加属性和方法
+    function Star(name,sex,age) {
+        this.name = uname;
+        this.sex = sex;
+        this.age = age;
+        this.sing = function(sang) {
+            console.log(sang);
+        }
+    }
+    var ldh = new Star('刘德华','男','18')
+      遍历对象 
+      var obj = {
+                name: 'pink老师',
+                age: 18,
+                sex: '男',
+                fn: function() {}
+            }
+            // console.log(obj.name);
+            // console.log(obj.age);
+            // console.log(obj.sex);
+        for (var k in obj) {
+            console.log(k); // k 变量 输出  得到的是 属性名
+            // console.log(obj[k]); // obj[k] 得到是 属性值
+
+        }
+        我们使用 for in 里面的变量 我们喜欢写 k  或者  key
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

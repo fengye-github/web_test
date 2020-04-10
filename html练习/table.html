@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+   用户名： <input type="text" value = "请输入用户名"> <br>
+   昵&nbsp;&nbsp;&nbsp;称： <input type="text" value = "请输入呢称"> <br>
+   密&nbsp;&nbsp;&nbsp;码： <input type="password"> <br>
+   性别：<input type="radio" name="sex">男
+   <input type="radio" name="sex">女
+   <input type="radio" name="sex">未知 <br>
+   爱好：<input type="checkbox" name="hobby">篮球
+   <input type="checkbox" name="hobby">爬山
+   <input type="checkbox" name="hobby" checked = "checked">睡觉 <br>
+   <!-- <button>获取短信验证码</button> &nbsp;
+   <button>提交所填</button>&nbsp; 
+   <button>重复所填</button> -->
+   <input type="button" value="获取短信验证码">
+   <input type="button" value="提交所填">
+   <input type="button" value="重复所填">
+   <input type="image" src="" value="免费注册"> <br>
+   上传头像：<input type="file"> <br>
+   用户留言：<textarea ></textarea> <br>
+   籍贯：
+   <select >
+       <!-- 省份选择的  selected="selected" 表示默认选中 北京 -->
+       <option>请选择省份</option>
+       <option selected ="selected">北京</option>
+       <option>天津</option>
+       <option>上海</option>
+       <option>深圳</option>
+   </select>
+   <select >
+       
+        <option>请选择城市</option>
+        <option selected ="selected">海淀区</option>
+       <option>昌平区</option>
+       <option>东城区</option>
+       <option>西城区</option>
+   </select>
+<!-- 表单域，现在看不到效果，等用到AJAX就能看到后台交互效果 -->
+   <form url="" action="post" name="user">
+       用户名：<input type="text" name="username"> <br>
+       密码：<input type="password" name="pwd"> <br>
+       <input type="submit">
+       <input type="reset">
+   </form>
+
+</body>
+</html>

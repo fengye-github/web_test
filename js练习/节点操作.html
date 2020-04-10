@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作</title>
+</head>
+
+<body>
+    <input type="text">
+    <!-- <ul>
+        <1i>111</1i>
+        <1i>2</1i>
+        <1i>3</1i>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        var lili = ul.children[0].cloneNode(true);
+        ul.appendChild(lili);
+    </script> -->
+    <script>
+        // document.onkeyup = function() {
+        //     console.log('我弹起了')；
+        // }
+        // 核心思路 / ；用户是否按下s键， 如果按下s键就吧光标定到搜索框里
+        var search = document.querySelector('input');
+        document.addEventListener('keyup', function(e) {
+            if (e.keyCode === 83) {
+                search.focus();
+            }
+        })
+    </script>
+</body>
+
+</html>

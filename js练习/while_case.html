@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //   while用法  // <!-- 打印一个人从1岁到100岁 -->
+    //     var i = 1;
+    //     while(i <= 100){
+
+    //         console.log('这个人今年'+i+'岁了')
+    //     i++;
+    // }
+    // // 计算从1到100之间整数的和
+    // var sum = 0;
+    // var j = 1;
+    // while (j <= 100){
+    //     sum += j;
+    //     j++;
+    // }
+    // console.log(sum)
+    // 弹出一个对话框 你爱我吗，输入我爱你，就提示结束，否则就一直询问
+    // var que = prompt('你爱我吗');
+    // while ( que !=='我爱你'){
+    //    que = prompt('你爱我吗');
+    // }
+    // alert('我也爱你呀')
+        // do while的用法
+        // var i = 1;
+        // do {
+        //     console.log('我爱你');
+        //     i++;
+        // } while (i <= 5)
+        // ====continue 的用法====
+        // continue 推出本次循环，继续执行剩余次数循环
+        // break 是跳出整个for循环
+       
+        for ( var i = 1; i <= 5; i++) {
+            if (i == 3){
+                break;
+            }
+            console.log ('我正在吃第' + i + '个包子')
+        }
+        var sum = 0;
+        for ( var i = 1; i <= 100; i++) {
+            if (i % 7 == 0){
+                continue;
+            }
+            sum += i;
+        }
+        console.log (sum)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

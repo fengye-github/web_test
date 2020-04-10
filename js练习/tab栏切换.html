@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab栏切换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .nav {
+            width: 978px;
+            margin: 100px auto;
+        }
+        
+        .nav_list {
+            height: 39px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        
+        .nav_list li {
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .nav_list .current {
+            background-color: #c81623;
+            color: #fff;
+        }
+        
+        item {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav_list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价（50000）</li>
+                <li>手机社区</li>
+
+            </ul>
+        </div>
+        <div class="nav_con">
+            <div class="item" style="display: block">
+                商品介绍模块内容
+            </div>
+            <div class="item">
+                规格与包装
+            </div>
+            <div class="item">
+                售后保障
+            </div>
+            <div class="item">
+                商品评价（50000）
+            </div>
+            <div class="item">
+                手机社区
+            </div>
+        </div>
+
+    </div>
+    <script>
+        // 获取元素
+        var lis = document.querySelectorAll('li');
+        var nav_list = document.querySelector('.nav_list');
+        var items = document.querySelectorAll('.item');
+        // for 循环绑定点击事件
+        for (var i = 0; i < lis.length; i++) {
+            // 开始给5个小li 设置索引号
+            lis[i].setAttribute('index', i);
+            lis[i].onclick = function() {
+                // 排他思想  干掉所有人，留下我自己
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].className = '';
+                }
+                this.className = 'current';
+                // 2. 下面的显示内容模块
+                var index = this.getAttribute('index');
+                console.log(index);
+                // 干掉所有人 让其余的item 这些div 隐藏
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.display = 'none';
+                }
+                // 留下我自己 让对应的item 显示出来
+                items[index].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

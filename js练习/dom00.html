@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get_elements</title>
+</head>
+
+<body>
+    <div class="time">2020-3-30</div>
+    <script>
+        var timer = document.getElementById('time');
+        console.log(typeof timer);
+        console.log(timer);
+        console.dir(timer);
+        // 1.确定事件源（谁
+        // 2.绑定事件（要干啥
+        // 3.执行事件（怎么做
+        var div = document.querySelector('div');
+        div.onclick = function() {
+            console.log('我被选中二零');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.shortcut {
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1
+}
+.style_red {
+    color: red;
+}
+
+}
+.short ul li {
+    float: left;
+
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.shortcut .fr ul li:nth-child(even) {
+    width: 2px;
+    height: 12px;
+    margin: 8px 15px 0;
+}
+
+
